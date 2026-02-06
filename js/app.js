@@ -171,4 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
             closePreview();
         }
     });
+
+    // Prevent pinch-zoom on the main page (iOS Safari workaround)
+    document.addEventListener('gesturestart', function(e) {
+        // Allow gesture on iframe (PDF viewer) if it bubbles, otherwise prevent
+        if (e.target.tagName !== 'IFRAME') {
+            e.preventDefault();
+        }
+    });
 });
