@@ -1,15 +1,67 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>ucio.cn</title>
-    <meta name="keywords" content="ucio" />
-    <link rel="shortcut icon" href="favicon.png" />
-    <style>html {user-select: none;padding: 10px;background-color: #1e1e1e;color: beige;text-align: center;font-size: 0.5rem;}</style>
-  </head>
-    此頁有意留白</br>
-    THIS PAGE IS INTENTIONALLY LEFT BLANK.
-  </body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCIO</title>
+    <meta name="description" content="企业内部文档发布与检索平台">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="/" class="logo-link">
+                    <img src="/img/logo.png" alt="UCIO logo" class="logo-icon">
+                </a>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索..." aria-label="搜索文档">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="filter-group">
+                <ul id="categoryList" class="category-list">
+                    <li class="active" data-category="all">全部文档</li>
+                    <!-- Categories will be injected here -->
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content-area">
+            <div class="toolbar">
+                <span id="resultCount">加载中...</span>
+                <div class="view-toggle" style="display:none;">
+                    <!-- Future: List/Grid toggle -->
+                </div>
+            </div>
+            <div id="documentList" class="document-list">
+                <!-- Documents will be injected here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- PDF Viewer Modal -->
+    <div id="pdfModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">文档预览</h2>
+                <button id="closeModal" class="close-btn" aria-label="关闭预览">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+                <div id="mdContainer" class="md-container" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
 </html>

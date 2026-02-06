@@ -1,0 +1,30 @@
+[
+  {
+    "id": 5205885000134725723,
+    "title": "Protected Sample Document (samplefiles)",
+    "category": "PDF Document",
+    "date": "2026-02-06",
+    "file": "docs/PDF Document/Protected Sample Document (samplefiles).pdf"
+  },
+  {
+    "id": 6618395105721659092,
+    "title": "Sample Document for PDF Testing",
+    "category": "PDF Document",
+    "date": "2026-02-06",
+    "file": "docs/PDF Document/Sample Document for PDF Testing.pdf"
+  },
+  {
+    "id": 148763294832096890,
+    "title": "Hello markdown",
+    "category": "MD Document",
+    "date": "2026-02-03",
+    "file": "docs/MD Document/Hello markdown.md"
+  },
+  {
+    "id": 5598713988841176094,
+    "title": "Lorem ipsum",
+    "category": "MD Document",
+    "date": "2026-02-03",
+    "file": "docs/MD Document/Lorem ipsum.md"
+  }
+]
